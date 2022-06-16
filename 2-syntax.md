@@ -4,10 +4,10 @@ This chapter contains information about Lua code and examples in text. This chap
 ### Table of Contents
 - Code comments & imports
 - Printing & Variables
-- Operations
-- Conditions
-- Functions
+- Operators 
+- Conditions & Comparison Operators 
 - Loops
+- Functions
 - Tables
 
 ## Code Comments & Imports
@@ -55,3 +55,40 @@ local money = nil           -- Nil
 - **Number** can be decimal or integer values (also known as floats in other languages)
 - **Boolean** is exclusively true or false as values
 - **Nil** all variables nil by default until given a value
+
+## Operators
+Like other languages, Lua has 7 operators that can be used
+```lua
+= -- Equal to
++ -- Addition
+- -- Subtract
+* -- Multiply
+/ -- Divide
+^ -- Power
+% -- Modulo (Mod)
+```
+
+```lua
+local x = 10
+local y = 5
+
+local a = x + y   -- 10 plus 5
+print(a)  -- 15
+
+local b = x - y   -- 10 minus 5
+print(b)  -- 5 
+
+local c = x * y   -- 10 times 5
+print(c)  -- 50
+
+local d = x / y   -- 10 by 5
+print(d)  -- 3
+
+local e = x ^ y   -- 10 to the power of 5
+print(e)  -- 10000
+
+local f = y % x   -- 5 modulo 10 (remainder of 5 by 10)
+print(f)  -- 5    
+```
+
+Operators and Comparison Operators are two different things. Operators are used in arithmetic equations while Comparison Operators are used to compare two or more statements. Comparison Operators will be explained more in-depth in the next section.
