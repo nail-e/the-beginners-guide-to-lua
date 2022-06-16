@@ -2,9 +2,10 @@
 This chapter contains information about Lua code and examples in text. This chapter is formatted in a cheatsheet like format. 
 
 ### Table of Contents
-- Code comments & imports
+- Code Comments & Imports
 - Printing
-- Variables & Assignments
+- Variables
+- Variable Assignment
 - Operators 
 - Conditions & Comparison Operators 
 - Loops
@@ -28,7 +29,7 @@ The print function on Lua is the most basic piece of code on Lua
 print("Hello World!")
 ```
 
-## Variables & Assignments
+## Variables
 
 Variables can have a local tag for a variable to become local or no tag to become global 
 
@@ -78,7 +79,9 @@ local money = x
 print(type(money))      -- nil
 ```
 
-Variables can be assigned in multiple ways
+## Variable Assignment
+
+Values can be assigned to variables in multiple ways
 
 - **Chained assignment** is variable assignment that gives the same value to multiple variables
 ```lua
@@ -91,23 +94,36 @@ a = b
 b = c
 c = d
 
-print(d)
+print(d) -- 5
+```
+
+- **Compound assignment** is variable assignment using operators that increment the current value by a certain amount.
+```lua
+a = a + 1
+
+print(a) -- 6
 ```
 
 - **Parallel assignment** is variable assignment that gives different variables different values in a single line of code
 ```lua
 a, b, c, d = 1, 2, 3, 4
 
-print(a)
-print(b)
-print(c)
-print(d)
+print(a) -- 1
+print(b) -- 2
+print(c) -- 3
+print(d) -- 4
+
+-- Parallel assignments can be changed to reassign values further in the code
+
+print(a, b) -- 1 2
+a, b = b, a
+print(a, b) -- 2 1
 ```
 
 ## Operators
 Like other languages, Lua has 8 operators that can be used
 ```lua
-=   -- Equal to
+=   -- Equal to (Arithmetic operator only)
 +   -- Addition
 -   -- Subtract
 *   -- Multiply
@@ -143,13 +159,25 @@ g = name .. "'s score is " .. y .. " out of " x   -- name from previous section 
 print(g)  -- Jimmy's score is 5 out of 10       
 ```
 
-Operators and Comparison Operators are two different things. Operators are used in arithmetic equations while Comparison Operators are used to compare two or more statements. Comparison Operators will be explained more in-depth in the next section.
+Operators and Comparison Operators are two different things. Operators are used in arithmetic equations while Comparison Operators are used to compare two or more statements. 
 
 ## Condition & Comparison Operators
 Conditions are reserved keywords that execute code if a certain condition is met
 ```lua
-if
-elseif
-else
-then
+if        -- Indicates the start of a conditional statement, is the initial statement a comparison operator follows
+elseif    -- Is the secondary statement a comparison operator follows. Can be used as many times in a conditional statement
+else      -- Executes code if no previous statements are met. Can only be used once and must be last in conditon statements
+then      -- Follows if and elseif to the end of the condition
+end       -- Ends a conditional statement or a loop
 ```
+
+Condition operators are operators that compare two or more statements.
+```lua
+==   -- Equal to (Condition operator only)
+~=   -- Not Equal to
+>    -- Greater than
+<    -- Less than
+>=   -- Greater than or equal to
+<=   -- Less than or equal to
+```
+
