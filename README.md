@@ -5,7 +5,7 @@ This is a small little guide intended for beginners for Lua. This is a little si
 
 | Chapter     | Content     |
 | :---        | :---        |
-| 1      | Installing Lua on VSCode       | 
+| 1      | Installing Lua      | 
 | 2   | Syntax        | 
 | 3   | Libraries |
 | 4   | Lua Exercises |
