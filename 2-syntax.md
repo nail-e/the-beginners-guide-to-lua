@@ -41,31 +41,51 @@ local a = hello       -- local variable
 ```
 
 Variables can have different data types
+
+- **Function**s are reserved keywords that is written in Lua or pointed out by the user
 ```lua
-print("")                   -- Function
-local name = "Jimmy"        -- String
-local username = "J-immy"   -- String
-local age = 16              -- Number
-local height = 165.5        -- Number 
-local inSchool = true       -- Boolean
-local money = nil           -- Nil 
+function studentId(IdNo)
+  end
+print(type(studentId))  -- function
 ```
-- **Function**s are reserved keywords that is written in Lua
 - **String**s are ASCII text values
+```lua
+name = Jimmy
+
+print(type(name))       -- string
+```
 - **Number** can be decimal or integer values (also known as floats in other languages)
+```lua
+local age = 16
+local height = 165.5
+
+print(type(age))        -- number
+print(type(height))     -- number
+```
 - **Boolean** is exclusively true or false as values
-- **Nil** all variables nil by default until given a value
+```lua
+local inSchool = false
+
+print(type(inSchool))   -- boolean
+```
+- **Nil** all variables nil by default until given a value. Signifies error or no value.
+```lua
+local money = x
+
+print(type(money))      -- nil
+```
 
 ## Operators
-Like other languages, Lua has 7 operators that can be used
+Like other languages, Lua has 8 operators that can be used
 ```lua
-= -- Equal to
-+ -- Addition
-- -- Subtract
-* -- Multiply
-/ -- Divide
-^ -- Power
-% -- Modulo (Mod)
+=   -- Equal to
++   -- Addition
+-   -- Subtract
+*   -- Multiply
+/   -- Divide
+^   -- Power
+%   -- Modulo (Mod)
+..  -- Concatenate String
 ```
 
 ```lua
@@ -88,7 +108,19 @@ local e = x ^ y   -- 10 to the power of 5
 print(e)  -- 10000
 
 local f = y % x   -- 5 modulo 10 (remainder of 5 by 10)
-print(f)  -- 5    
+print(f)  -- 5
+
+g = name .. "'s score is " .. y .. " out of " x   -- name from previous section concatenated with local variables
+print(g)  -- Jimmy's score is 5 out of 10       
 ```
 
 Operators and Comparison Operators are two different things. Operators are used in arithmetic equations while Comparison Operators are used to compare two or more statements. Comparison Operators will be explained more in-depth in the next section.
+
+## Condition & Comparison Operators
+Conditions are reserved keywords that execute code if a certain condition is met
+```lua
+if
+elseif
+else
+then
+```
