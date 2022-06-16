@@ -3,7 +3,8 @@ This chapter contains information about Lua code and examples in text. This chap
 
 ### Table of Contents
 - Code comments & imports
-- Printing & Variables
+- Printing
+- Variables & Assignments
 - Operators 
 - Conditions & Comparison Operators 
 - Loops
@@ -21,11 +22,13 @@ The require function imports code from other files in the same environment to th
 require("filename")
 ```
 
-## Printing & Variables
+## Printing
 The print function on Lua is the most basic piece of code on Lua 
 ```lua
 print("Hello World!")
 ```
+
+## Variables & Assignments
 
 Variables can have a local tag for a variable to become local or no tag to become global 
 
@@ -73,6 +76,32 @@ print(type(inSchool))   -- boolean
 local money = x
 
 print(type(money))      -- nil
+```
+
+Variables can be assigned in multiple ways
+
+- **Chained assignment** is variable assignment that gives the same value to multiple variables
+```lua
+a = 5
+b = 0
+c = 0
+d = 0
+
+a = b
+b = c
+c = d
+
+print(d)
+```
+
+- **Parallel assignment** is variable assignment that gives different variables different values in a single line of code
+```lua
+a, b, c, d = 1, 2, 3, 4
+
+print(a)
+print(b)
+print(c)
+print(d)
 ```
 
 ## Operators
