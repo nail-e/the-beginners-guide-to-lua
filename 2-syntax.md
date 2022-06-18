@@ -181,3 +181,75 @@ Condition operators are operators that compare two or more statements.
 <=   -- Less than or equal to
 ```
 
+If, elseif and else can be chained to make a **statement**
+```lua
+age = 16
+if age >= 18 then
+  print("User is 18 or over")
+elseif age < 18 then
+  print("User is younger than 18")
+else
+  print("Invalid age")
+end
+```
+Make sure to always put the ```then ``` keywword after ```if``` or ```elseif``` statements and ```end``` after conditions
+
+Statements can be **inverted** with ```not```
+```lua
+if not age >= 18 then
+  print("User is younger than 18")
+end
+```
+
+Statements can be **combined** with ```and``` or ```or```
+```lua
+local age = 16
+local height = 165
+
+if age >= 16 and height == 165 then   
+  print("User is eligible for a drivers license")
+elseif age <= 16 or height <= 165 then
+  print("User is not eligible for a drivers license due to height or age")
+end
+```
+
+Statements can be **nested**
+```lua
+local age = 12
+local inSchool = true
+
+if age == 12 then
+  if inSchool == true then
+    print("User is in school and is 12")
+  else
+    print("User is not in school but is 12")
+  end
+elseif not age == 12 then
+  if inSchool == true then
+    print("User is in school and is not 12")
+  else
+    print("User is not in school and is not 12")  
+end
+```
+
+This also applies to boolean comparisons
+```lua
+local isAdult = false
+
+if isAdult then
+  print("The user is over 18")
+else
+  print("The user is under 18")
+```
+
+and string comparisons
+```lua
+local name = "Jimmy"
+
+if name == "Jimmy" then
+  print("This is Jimmy")
+else
+  print("This is not Jimmy")
+```
+
+## Loops
